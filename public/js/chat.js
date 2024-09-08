@@ -1,4 +1,4 @@
-const socket = io('https://chat-app-vtvv.onrender.com:10000')
+const socket = io('https://chat-app-vtvv.onrender.com')
 
 // Elements
 const $messageForm = document.querySelector('#message-form')
