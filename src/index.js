@@ -16,7 +16,7 @@ const io = socketio(server, {
         allowedHeaders: ['my-custom-header'],
         credentials: true
     }
-});)
+})
 
 const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
