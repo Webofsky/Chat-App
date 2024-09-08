@@ -11,7 +11,7 @@ const app = express()
 const server =http.createServer(app)
 const io = socketio(server, {
     cors: {
-        origin: 'https://webofsky-chat.netlify.app', // Zastąp swoją rzeczywistą domeną
+        origin: 'https://chat.webofsky.pl',
         methods: ['GET', 'POST'],
         allowedHeaders: ['my-custom-header'],
         credentials: true
