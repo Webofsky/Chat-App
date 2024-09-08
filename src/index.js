@@ -9,7 +9,14 @@ const { isGeneratorObject } = require('util/types')
 
 const app = express()
 const server =http.createServer(app)
-const io = socketio(server)
+const io = socketio(server, {
+    cors: {
+        origin: 'https://webofsky-chat.netlify.app', // Zastąp swoją rzeczywistą domeną
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['my-custom-header'],
+        credentials: true
+    }
+});)
 
 const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
